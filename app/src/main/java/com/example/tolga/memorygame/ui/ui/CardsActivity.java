@@ -10,9 +10,11 @@ import android.widget.TextView;
 import com.example.tolga.memorygame.R;
 
 public class CardsActivity extends AppCompatActivity{
-    int cmatch = 0;
-    int score =0;
-    int crash=0;
+
+    private int cmatch = 0;
+    private int score =0;
+    private int trying=0;
+    private int crash=0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,7 +22,7 @@ public class CardsActivity extends AppCompatActivity{
         setContentView(R.layout.activity_cards);
 
         Intent i = getIntent();
-        String s = i.getStringExtra("mesaj");
+        final String s = i.getStringExtra("mesaj");
         TextView txt = (TextView) findViewById(R.id.textView);
         txt.setText("Welcome "+ s);
 
@@ -32,34 +34,44 @@ public class CardsActivity extends AppCompatActivity{
             cc[j-1].setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    final Cards k = (Cards)v;
+                    trying++;
 
+                    final Cards k = (Cards)v;
+                    k.change();
                     if (cmatch>0){
                         final Cards k2 = (Cards) findViewById(cmatch);
 
                         if (k2.frontID==k.frontID&&k2.getId()!=k.getId()){
                             k2.noChange=false;
                             k.noChange=false;
+                            cmatch = 0;
 
-                            if (score==14){
+                            score++;
+
+                            if (score==14){ // Eşleştiler ve Result activity'e gönderildi.
 
                                 Intent ifinish = new Intent(CardsActivity.this, ResultActivity.class);
+                                String score = String.valueOf(trying);
+                                ifinish.putExtra("score",score);
+                                ifinish.putExtra("name",s);
                                 startActivity(ifinish);
                             }
 
                         }else{
-                            Handler h = new Handler();
+                            Handler h = new Handler();  // Bekletme ve ters çevirme alanı
                             h.postDelayed(new Runnable() {
                                 @Override
                                 public void run() {
                                     k.change();
                                     k2.change();
+
                                 }
                             },500);
                             crash++;
                             cmatch = 0;
                         }
                     }else{
+
                         cmatch= k.getId();
                     }
                 }

@@ -16,63 +16,58 @@ public class Cards extends Button {
     Drawable drear;
     Drawable dfront;
 
-
-
-
-
     public Cards (Context context,int id) {
         super(context);
         setId(id);
         backroundID = R.drawable.back;
 
-
-        if (id%14==0) {
+        if (id%14==1) {
             frontID = R.drawable.d1 ;
         }
-        if (id%14==1) {
+        if (id%14==2) {
             frontID = R.drawable.d2;
         }
-        if (id%14==2) {
+        if (id%14==3) {
             frontID = R.drawable.d3;
         }
-        if (id%14==3) {
+        if (id%14==4) {
             frontID = R.drawable.d4;
         }
-        if (id%14==4) {
+        if (id%14==5) {
             frontID = R.drawable.d5;
         }
-        if (id%14==5) {
+        if (id%14==6) {
             frontID = R.drawable.d6;
         }
-        if (id%14==6) {
+        if (id%14==7) {
             frontID = R.drawable.d7;
         }
-        if (id%14==7) {
+        if (id%14==8) {
             frontID = R.drawable.d8;
         }
 
-        if (id%14==8) {
+        if (id%14==9) {
             frontID = R.drawable.d9;
         }
 
-        if (id%14==9) {
+        if (id%14==10) {
             frontID = R.drawable.d10;
         }
 
-        if (id%14==10) {
+        if (id%14==11) {
             frontID = R.drawable.d11;
         }
 
-        if (id%14==11) {
+        if (id%14==12) {
             frontID = R.drawable.d12;
         }
 
 
-        if (id%14==12) {
+        if (id%14==13) {
             frontID = R.drawable.d13;
         }
 
-        if (id%14==13) {
+        if (id%14==0) {
             frontID = R.drawable.d14;
         }
 

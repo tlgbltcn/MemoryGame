@@ -1,21 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="@drawable/bababa"
     android:layout_height="match_parent"
+    android:background="@drawable/bababa"
     tools:context="com.example.tolga.memorygame.ui.ui.ResultActivity">
 
     <TextView
-        android:layout_width="368dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:paddingTop="130dp"
         android:id="@+id/resulttxt"
         android:text="Congratulations!"
         android:textStyle="bold"
-        android:textSize="40sp"
         android:gravity="center"
-        tools:layout_editor_absoluteY="0dp"
-        tools:layout_editor_absoluteX="8dp" />
+        android:textSize="40sp"
+        android:layout_alignParentEnd="true" />
 
-</android.support.constraint.ConstraintLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/try_txt"
+        android:textSize="20dp"
+        android:gravity="center"
+        android:layout_below="@+id/resulttxt"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="20dp"
+        android:id="@+id/btn_restart"
+        android:layout_below="@+id/try_txt"
+        android:background="@color/purple1"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:padding="20dp"
+        android:text="Restart Game"
+        android:gravity="center"
+        android:layout_alignParentEnd="true" />
+
+</RelativeLayout>
