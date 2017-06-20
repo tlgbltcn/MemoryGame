@@ -14,9 +14,9 @@
         android:layout_height="wrap_content"
         android:columnCount="4"
         android:rowCount="7"
-        android:layout_marginLeft="35dp"
-        tools:layout_editor_absoluteY="8dp"
-        tools:layout_editor_absoluteX="9dp">
+        android:orientation="horizontal"
+        android:layout_centerInParent="true"
+        >
     </GridLayout>
 
     <TextView
@@ -27,9 +27,7 @@
         android:textStyle="bold"
         android:layout_below="@id/gridLayout"
         android:gravity="center"
-        android:layout_gravity="center_horizontal"
-        tools:layout_editor_absoluteY="8dp"
-        tools:layout_editor_absoluteX="0dp" />
+        android:layout_gravity="center_horizontal"/>
 
 
 </RelativeLayout>

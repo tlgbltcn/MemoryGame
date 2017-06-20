@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.tolga.memorygame.R;
@@ -12,7 +13,7 @@ import com.example.tolga.memorygame.R;
 public class ResultActivity extends AppCompatActivity implements View.OnClickListener {
     private String s;
     private String name;
-    private Button btn;
+    private ImageView btn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,7 +26,7 @@ public class ResultActivity extends AppCompatActivity implements View.OnClickLis
         TextView txt = (TextView) findViewById(R.id.try_txt);
         txt.setText("You tried it " +s+ " times");
 
-        btn = (Button) findViewById(R.id.btn_restart);
+        btn = (ImageView) findViewById(R.id.btn_restart);
         btn.setOnClickListener(this);
 
     }
@@ -34,7 +35,7 @@ public class ResultActivity extends AppCompatActivity implements View.OnClickLis
     public void onClick(View v) {
 
         Intent i = new Intent(ResultActivity.this, CardsActivity.class);
-        i.putExtra("mesaj",name);
+//        i.putExtra("mesaj",name);
         startActivity(i);
     }
 }

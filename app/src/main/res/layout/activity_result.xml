@@ -6,36 +6,69 @@
     android:background="@drawable/bababa"
     tools:context="com.example.tolga.memorygame.ui.ui.ResultActivity">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingTop="130dp"
-        android:id="@+id/resulttxt"
-        android:text="Congratulations!"
-        android:textStyle="bold"
-        android:gravity="center"
-        android:textSize="40sp"
-        android:layout_alignParentEnd="true" />
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/try_txt"
-        android:textSize="20dp"
-        android:gravity="center"
-        android:layout_below="@+id/resulttxt"/>
 
-    <Button
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/board"
+        android:id="@+id/framelayout">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="55dp"
+            android:id="@+id/resulttxt"
+            android:text="Congratulations!"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:textSize="40sp"
+            android:layout_alignParentEnd="true" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="120dp"
+            android:id="@+id/try_txt"
+            android:textStyle="bold"
+            android:textSize="25sp"
+            android:gravity="center"
+            android:layout_below="@+id/resulttxt"/>
+
+
+    </FrameLayout>
+
+
+
+    <ImageView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingTop="20dp"
+        android:layout_marginTop="20dp"
+        android:paddingTop="15dp"
         android:id="@+id/btn_restart"
-        android:layout_below="@+id/try_txt"
-        android:background="@color/purple1"
+        android:layout_below="@+id/framelayout"
+        android:src="@drawable/restartgame"
         android:layout_marginLeft="40dp"
         android:layout_marginRight="40dp"
         android:padding="20dp"
         android:text="Restart Game"
+        android:gravity="center"
+        android:layout_alignParentEnd="true" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:paddingTop="15dp"
+        android:id="@+id/btn_exit"
+        android:layout_below="@+id/btn_restart"
+        android:src="@drawable/restartgame"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:padding="20dp"
         android:gravity="center"
         android:layout_alignParentEnd="true" />
 
